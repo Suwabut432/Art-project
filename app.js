@@ -23,6 +23,7 @@ const owner = require("./routes/owner");
 
 app.use(cookieParser());
 app.use(express.json());
+app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "ejs");
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(Path.join(__dirname, "public")))
