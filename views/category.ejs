@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Project</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="scroll-smooth">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full z-50 border-b-4 border-white border-opacity-50 bg-white/0 backdrop-blur-md shadow-2xl">
+    <div class="flex items-center justify-between px-2">
+      <div class="justify-center text-gray-100 flex items-center gap-4 bg-black h-[40px] w-[40px] rounded-full">
+        <h1 class="font-bold text-lg">A</h1>
+      </div>
+      <div class="flex gap-4 px-4 py-3">
+        <a href="#home">
+          <button class="text-lg font-medium w-24 text-center px-2 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold">
+            Home
+          </button>
+        </a>
+        <a href="#login">
+          <button class="text-lg font-medium w-24 text-center px-2 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold">
+            Login
+          </button>
+        </a>
+        <a href="#categories">
+          <button class="text-lg font-medium w-32 text-center px-2 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold">
+            Categories
+          </button>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Categories -->
+  <section id="categories" class="h-screen bg-rose-50 justify-center w-full px-16">
+    <h1 class="text-3xl font-semibold px-12 mt-32 pb-4">CATEGORIES</h1>
+
+    <div class="grid grid-cols-3 gap-4 px-10 ">
+      <!-- Category Card -->
+      <div class="bg-gradient-to-br from-pink-100 to-purple-200 flex flex-col items-center justify-center h-[300px] w-[300px] bg-white rounded-md border border-gray-300">
+        <div class="flex flex-col items-center justify-center h-[70%] w-full">
+          <img src="/images/home.jpg" alt="Art" class="h-full w-full object-cover rounded-t-md" />
+        </div>
+        <div class="flex flex-col items-center justify-center h-[30%] w-full p-2">
+          <p class="text-lg">
+            This is the home page of the Art Project
+            <a href="#picture" class="text-blue-500 font-bold text-sm">. View More.....</a>
+          </p>
+        </div>
+      </div>
+
+
+
+
+      <!-- Duplicate the above block for more categories -->
+    </div>
+  </section>
+
+      <!-- Footer -->
+  <footer class="mt-[60px] px-[20px] py-3 bg-[#343a40] color-white text-center">
+    <div>📞 Contact: 0300-1234567 | 🏥 Address: Lahore, Pakistan</div>
+  </footer>
+
+</body>
+</html>
