@@ -3,18 +3,9 @@ const router = express.Router();
 
 const isLoggedIn = require("../middlewares/islogedin");
 
-
-
-
 router.get("/", function(req, res) {
-    res.render("index");
-   
+    res.render("category");
 })
-
-
-
-
-
 
 
 module.exports = router;
