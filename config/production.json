@@ -1,0 +1,4 @@
+{
+  "mongoUrl": "your_mongo_url",
+  "port": 3000
+}

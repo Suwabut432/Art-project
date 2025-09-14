@@ -9,11 +9,10 @@ const config = require("config");
 const connectDB = async () => {
   try {
     const conn = await mongoose
-    .connect(`${config.get("MONGODB_URI")}/Art-project`);
+    .connect(process.env.MONGO_URL);
     dbgr(`✅ MongoDB connected:`);
   } catch (error) {
     dbgr('❌ MongoDB connection error:', error.message);
-    process.exit(1);
   }
 };
 
