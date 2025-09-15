@@ -9,31 +9,33 @@
 <body class="scroll-smooth">
 
   <!-- Header -->
-  <header class="fixed top-0 left-0 w-full z-50 border-b-4 border-white border-opacity-50 bg-transparent backdrop-blur-md shadow-2xl">
-    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between px-4">
-      <!-- Logo / Icon -->
-      <div class="flex items-center justify-center sm:justify-start gap-4 bg-black h-10 w-10 rounded-full mt-2 sm:mt-0 mx-auto sm:mx-0">
-        <!-- User Icon -->
+  <header class="fixed top-0 left-0 w-full z-50 border-b border-white/50 bg-white/20 backdrop-blur-md shadow-lg">
+    <div class="flex items-center justify-between px-4 py-2">
+      <!-- Logo -->
+      <div class="flex items-center gap-4 bg-black text-gray-100 h-10 w-10 rounded-full">
+        <h1 class="font-bold text-lg mx-auto">A</h1>
       </div>
 
-      <!-- Navigation -->
-      <div class="flex flex-col sm:flex-row sm:gap-4 px-2 py-2 sm:py-3 items-center">
-        <a href="/" class="w-full sm:w-auto mb-2 sm:mb-0">
-          <button class="text-base sm:text-lg font-medium w-full sm:w-24 text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">
-            Home
-          </button>
-        </a>
-        <a href="/register" class="w-full sm:w-auto mb-2 sm:mb-0">
-          <button class="text-base sm:text-lg font-medium w-full sm:w-24 text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">
-            Login
-          </button>
-        </a>
-        <a href="/category" class="w-full sm:w-auto">
-          <button class="text-base sm:text-lg font-medium w-full sm:w-32 text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">
-            Categories
-          </button>
-        </a>
-      </div>
+      <!-- Hamburger Button (mobile only) -->
+      <button id="menu-btn" class="sm:hidden flex flex-col justify-center items-center w-10 h-10">
+        <span class="block w-6 h-0.5 bg-black mb-1"></span>
+        <span class="block w-6 h-0.5 bg-black mb-1"></span>
+        <span class="block w-6 h-0.5 bg-black"></span>
+      </button>
+
+      <!-- Nav Links -->
+      <nav id="menu" class="hidden sm:flex sm:items-center sm:gap-4">
+        <a href="/" class="block text-base sm:text-lg font-medium text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">Home</a>
+        <a href="/register" class="block text-base sm:text-lg font-medium text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">Login</a>
+        <a href="/category" class="block text-base sm:text-lg font-medium text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">Categories</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Dropdown Links -->
+    <div id="mobile-menu" class="sm:hidden hidden flex-col px-4 pb-4 bg-white/80 backdrop-blur-md shadow-md">
+      <a href="/" class="block text-base font-medium text-center px-3 py-2 rounded-md hover:bg-gray-200">Home</a>
+      <a href="/register" class="block text-base font-medium text-center px-3 py-2 rounded-md hover:bg-gray-200">Login</a>
+      <a href="/category" class="block text-base font-medium text-center px-3 py-2 rounded-md hover:bg-gray-200">Categories</a>
     </div>
   </header>
 
@@ -43,6 +45,17 @@
     <p class="text-base sm:text-lg lg:text-xl max-w-2xl">This is the home page of the Art Project</p>
   </section>
 
+
+    <script>
+    // JS for toggle button
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex'); // show as flex column
+    });
+  </script>
 </body>
 </html>
 
