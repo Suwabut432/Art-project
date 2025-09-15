@@ -6,27 +6,30 @@
   <title>Art Project</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="scroll-smooth">
+<body class="scroll-smooth bg-rose-50">
 
   <!-- Header -->
-  <header class="fixed top-0 left-0 w-full z-50 border-b-4 border-white border-opacity-50 bg-white/0 backdrop-blur-md shadow-2xl">
-    <div class="flex items-center justify-between px-2">
-      <div class="justify-center text-gray-100 flex items-center gap-4 bg-black h-[40px] w-[40px] rounded-full">
+  <header class="fixed top-0 left-0 w-full z-50 border-b border-white/50 bg-white/20 backdrop-blur-md shadow-lg">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between px-4 py-2">
+      <!-- Logo -->
+      <div class="justify-center text-gray-100 flex items-center gap-4 bg-black h-10 w-10 rounded-full mx-auto sm:mx-0">
         <h1 class="font-bold text-lg">A</h1>
       </div>
-      <div class="flex gap-4 px-4 py-3">
-        <a href="/">
-          <button class="text-lg font-medium w-24 text-center px-2 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold">
+
+      <!-- Nav Buttons -->
+      <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-2 sm:mt-0 px-2 sm:px-4 py-2 sm:py-3 items-center">
+        <a href="/" class="w-full sm:w-auto">
+          <button class="text-base sm:text-lg font-medium w-full sm:w-24 text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">
             Home
           </button>
         </a>
-        <a href="/register">
-          <button class="text-lg font-medium w-24 text-center px-2 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold">
+        <a href="/register" class="w-full sm:w-auto">
+          <button class="text-base sm:text-lg font-medium w-full sm:w-24 text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">
             Login
           </button>
         </a>
-        <a href="/category">
-          <button class="text-lg font-medium w-32 text-center px-2 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold">
+        <a href="/category" class="w-full sm:w-auto">
+          <button class="text-base sm:text-lg font-medium w-full sm:w-32 text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">
             Categories
           </button>
         </a>
@@ -35,32 +38,52 @@
   </header>
 
   <!-- Categories -->
-  <section id="categories" class="h-screen bg-rose-50 justify-center w-full px-16">
-    <h1 class="text-3xl font-semibold px-12 mt-32 pb-4">CATEGORIES</h1>
+  <section id="categories" class="min-h-screen bg-rose-50 justify-center w-full px-4 sm:px-8 lg:px-16 pt-28 sm:pt-32">
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center sm:text-left mb-6">CATEGORIES</h1>
 
-    <div class="grid grid-cols-3 gap-4 px-10 ">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- Category Card -->
-      <div class="bg-gradient-to-br from-pink-100 to-purple-200 flex flex-col items-center justify-center h-[300px] w-[300px] bg-white rounded-md border border-gray-300">
-        <div class="flex flex-col items-center justify-center h-[70%] w-full">
-          <img src="/images/home.jpg" alt="Art" class="h-full w-full object-cover rounded-t-md" />
+      <div class="bg-gradient-to-br from-pink-100 to-purple-200 flex flex-col items-center justify-center rounded-md border border-gray-300 shadow-md hover:shadow-xl transition">
+        <div class="flex flex-col items-center justify-center w-full">
+          <img src="/images/home.jpg" alt="Art" class="h-48 sm:h-56 w-full object-cover rounded-t-md" />
         </div>
-        <div class="flex flex-col items-center justify-center h-[30%] w-full p-2">
-          <p class="text-lg">
+        <div class="flex flex-col items-center justify-center w-full p-4">
+          <p class="text-sm sm:text-base text-center">
             This is the home page of the Art Project
-            <a href="#picture" class="text-blue-500 font-bold text-sm">. View More.....</a>
+            <a href="#picture" class="text-blue-500 font-bold text-xs sm:text-sm"> View More...</a>
           </p>
         </div>
       </div>
 
+      <!-- Duplicate cards below for more categories -->
+      <div class="bg-gradient-to-br from-pink-100 to-purple-200 flex flex-col items-center justify-center rounded-md border border-gray-300 shadow-md hover:shadow-xl transition">
+        <div class="flex flex-col items-center justify-center w-full">
+          <img src="/images/home.jpg" alt="Art" class="h-48 sm:h-56 w-full object-cover rounded-t-md" />
+        </div>
+        <div class="flex flex-col items-center justify-center w-full p-4">
+          <p class="text-sm sm:text-base text-center">
+            Another category description
+            <a href="#picture" class="text-blue-500 font-bold text-xs sm:text-sm"> View More...</a>
+          </p>
+        </div>
+      </div>
 
-
-
-      <!-- Duplicate the above block for more categories -->
+      <div class="bg-gradient-to-br from-pink-100 to-purple-200 flex flex-col items-center justify-center rounded-md border border-gray-300 shadow-md hover:shadow-xl transition">
+        <div class="flex flex-col items-center justify-center w-full">
+          <img src="/images/home.jpg" alt="Art" class="h-48 sm:h-56 w-full object-cover rounded-t-md" />
+        </div>
+        <div class="flex flex-col items-center justify-center w-full p-4">
+          <p class="text-sm sm:text-base text-center">
+            Third category description
+            <a href="#picture" class="text-blue-500 font-bold text-xs sm:text-sm"> View More...</a>
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-      <!-- Footer -->
-  <footer class="mt-[60px] px-[20px] py-3 bg-[#343a40] color-white text-center">
+  <!-- Footer -->
+  <footer class="mt-16 px-4 sm:px-8 py-4 bg-[#343a40] text-white text-center text-sm sm:text-base">
     <div>📞 Contact: 0300-1234567 | 🏥 Address: Lahore, Pakistan</div>
   </footer>
 
