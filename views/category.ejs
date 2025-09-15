@@ -39,10 +39,49 @@
     </div>
   </header>
 
-  <!-- Categories Section (example) -->
-  <section id="categories" class="pt-24 min-h-screen bg-rose-50 px-4">
-    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center mb-6">CATEGORIES</h1>
-    <p class="text-center">Your categories content goes here...</p>
+  <!-- Categories -->
+  <section id="categories" class="min-h-screen bg-rose-50 justify-center w-full px-4 sm:px-8 lg:px-16 pt-28 sm:pt-32">
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center sm:text-left mb-6">CATEGORIES</h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Category Card -->
+      <div class="bg-gradient-to-br from-pink-100 to-purple-200 flex flex-col items-center justify-center rounded-md border border-gray-300 shadow-md hover:shadow-xl transition">
+        <div class="flex flex-col items-center justify-center w-full">
+          <img src="/images/home.jpg" alt="Art" class="h-48 sm:h-56 w-full object-cover rounded-t-md" />
+        </div>
+        <div class="flex flex-col items-center justify-center w-full p-4">
+          <p class="text-sm sm:text-base text-center">
+            This is the home page of the Art Project
+            <a href="#picture" class="text-blue-500 font-bold text-xs sm:text-sm"> View More...</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Duplicate cards below for more categories -->
+      <div class="bg-gradient-to-br from-pink-100 to-purple-200 flex flex-col items-center justify-center rounded-md border border-gray-300 shadow-md hover:shadow-xl transition">
+        <div class="flex flex-col items-center justify-center w-full">
+          <img src="/images/home.jpg" alt="Art" class="h-48 sm:h-56 w-full object-cover rounded-t-md" />
+        </div>
+        <div class="flex flex-col items-center justify-center w-full p-4">
+          <p class="text-sm sm:text-base text-center">
+            Another category description
+            <a href="#picture" class="text-blue-500 font-bold text-xs sm:text-sm"> View More...</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-pink-100 to-purple-200 flex flex-col items-center justify-center rounded-md border border-gray-300 shadow-md hover:shadow-xl transition">
+        <div class="flex flex-col items-center justify-center w-full">
+          <img src="/images/home.jpg" alt="Art" class="h-48 sm:h-56 w-full object-cover rounded-t-md" />
+        </div>
+        <div class="flex flex-col items-center justify-center w-full p-4">
+          <p class="text-sm sm:text-base text-center">
+            Third category description
+            <a href="#picture" class="text-blue-500 font-bold text-xs sm:text-sm"> View More...</a>
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
