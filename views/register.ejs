@@ -6,57 +6,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Art Project</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
 
-<body class="scroll-smooth">
+<body class="scroll-smooth bg-gray-50">
 
   <!-- Header -->
-  <header
-    class="fixed top-0 left-0 w-full z-50 border-b-4 border-white border-opacity-50 bg-white/0 backdrop-blur-md shadow-2xl">
-    <div class="flex items-center justify-between px-2">
-      <div class="flex items-center gap-4">
-        <!-- User Icon -->
-        <i class="fas fa-user-circle text-4xl"></i>
+  <header class="fixed top-0 left-0 w-full z-50 border-b border-white/30 bg-white/10 backdrop-blur-md shadow-lg">
+    <div class="flex items-center justify-between px-4 py-2">
+      <!-- User Icon -->
+      <div class="flex items-center gap-2 text-white">
+        <i class="fas fa-user-circle text-3xl sm:text-4xl"></i>
+        <span class="hidden sm:inline text-lg font-bold">Art Project</span>
       </div>
-      <div class="flex gap-4 px-4 py-3">
-        <a href="/">
-          <button
-            class="text-lg font-medium w-24 text-center px-2 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold">
-            Home
-          </button>
-        </a>
-        <a href="/register">
-          <button
-            class="text-lg font-medium w-24 text-center px-2 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold">
-            Login
-          </button>
-        </a>
-        <a href="/category">
-          <button
-            class="text-lg font-medium w-32 text-center px-2 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold">
-            Categories
-          </button>
-        </a>
-      </div>
+
+      <!-- Hamburger Button (mobile only) -->
+      <button id="menu-btn" class="sm:hidden flex flex-col justify-center items-center w-8 h-8">
+        <span class="block w-6 h-0.5 bg-white mb-1"></span>
+        <span class="block w-6 h-0.5 bg-white mb-1"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+      </button>
+
+      <!-- Nav Links Desktop -->
+      <nav id="menu" class="hidden sm:flex sm:items-center sm:gap-4">
+        <a href="/" class="block text-white text-base sm:text-lg font-medium px-3 py-1 rounded-md hover:bg-white/20">Home</a>
+        <a href="/register" class="block text-white text-base sm:text-lg font-medium px-3 py-1 rounded-md hover:bg-white/20">Login</a>
+        <a href="/category" class="block text-white text-base sm:text-lg font-medium px-3 py-1 rounded-md hover:bg-white/20">Categories</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="sm:hidden hidden flex-col px-4 pb-4 bg-white/10 backdrop-blur-lg shadow-md">
+      <a href="/" class="block text-white px-3 py-2 rounded-md hover:bg-white/20">Home</a>
+      <a href="/register" class="block text-white px-3 py-2 rounded-md hover:bg-white/20">Login</a>
+      <a href="/category" class="block text-white px-3 py-2 rounded-md hover:bg-white/20">Categories</a>
     </div>
   </header>
 
   <!-- Login Section -->
   <section id="login"
-    class="flex flex-col items-center justify-center h-screen w-full bg-[url('/images/log3.avif')] bg-cover">
+    class="flex flex-col items-center justify-center min-h-screen w-full bg-[url('/images/log3.avif')] bg-cover bg-center pt-24">
     <div
-      class="flex flex-col items-center justify-center h-[400px] w-[400px] rounded-[30px] border-2 border-black border-opacity-50 mt-[10%] bg-black/50">
-      <form action="/register/create" method="post" class="flex flex-col gap-2 items-center justify-center">
+      class="flex flex-col items-center justify-center w-[90%] sm:w-[400px] rounded-2xl border border-white/40 bg-black/50 backdrop-blur-md p-6 sm:p-8">
+      <h2 class="text-white text-2xl sm:text-3xl font-semibold mb-4">Login</h2>
+      <form action="/register/create" method="post" class="flex flex-col gap-3 w-full">
         <input type="text" placeholder="Username" name="name"
-          class="px-4 py-2 rounded-md w-64 border border-gray-300" />
-        <input type="email" placeholder="Email" name="email" class="px-4 py-2 rounded-md w-64 border border-gray-300" />
+          class="px-4 py-2 rounded-md w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50" />
+        <input type="email" placeholder="Email" name="email"
+          class="px-4 py-2 rounded-md w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50" />
         <input type="password" placeholder="Password" name="password"
-          class="px-4 py-2 rounded-md w-64 border border-gray-300" />
-        <button type="submit" class="bg-gray-800 text-white px-4 py-2 rounded-md mt-2">Login</button>
+          class="px-4 py-2 rounded-md w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50" />
+        <button type="submit"
+          class="bg-white/20 hover:bg-white/40 text-white px-4 py-2 rounded-md mt-2 transition">Login</button>
       </form>
     </div>
   </section>
 
+  <script>
+    // Toggle for mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
+  </script>
 </body>
 
 </html>
