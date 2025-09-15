@@ -9,24 +9,27 @@
 <body class="scroll-smooth">
 
   <!-- Header -->
-  <header class="fixed top-0 left-0 w-full z-50 border-b-4 border-white border-opacity-50 bg-white/0 backdrop-blur-md shadow-2xl">
-    <div class="flex items-center justify-between px-2">
-      <div class="flex items-center gap-4 bg-black h-[40px] w-[40px] rounded-full">
+  <header class="fixed top-0 left-0 w-full z-50 border-b-4 border-white border-opacity-50 bg-white/80 backdrop-blur-md shadow-2xl">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between px-4">
+      <!-- Logo / Icon -->
+      <div class="flex items-center justify-center sm:justify-start gap-4 bg-black h-10 w-10 rounded-full mt-2 sm:mt-0 mx-auto sm:mx-0">
         <!-- User Icon -->
       </div>
-      <div class="flex gap-4 px-4 py-3">
-        <a href="/">
-          <button class="text-lg font-medium w-24 text-center px-2 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold">
+
+      <!-- Navigation -->
+      <div class="flex flex-col sm:flex-row sm:gap-4 px-2 py-2 sm:py-3 items-center">
+        <a href="/" class="w-full sm:w-auto mb-2 sm:mb-0">
+          <button class="text-base sm:text-lg font-medium w-full sm:w-24 text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">
             Home
           </button>
         </a>
-        <a href="/register">
-          <button class="text-lg font-medium w-24 text-center px-2 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold">
+        <a href="/register" class="w-full sm:w-auto mb-2 sm:mb-0">
+          <button class="text-base sm:text-lg font-medium w-full sm:w-24 text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">
             Login
           </button>
         </a>
-        <a href="/category">
-          <button class="text-lg font-medium w-32 text-center px-2 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold">
+        <a href="/category" class="w-full sm:w-auto">
+          <button class="text-base sm:text-lg font-medium w-full sm:w-32 text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">
             Categories
           </button>
         </a>
@@ -35,9 +38,11 @@
   </header>
 
   <!-- Home Section -->
-  <section id="home" class="flex flex-col items-center justify-center h-screen w-full bg-[url('/images/back.jpeg')] bg-cover border-b-4 border-black border-opacity-50 pt-20">
-    <h1 class="text-4xl font-bold">Welcome to the Art Project</h1>
-    <p class="text-lg">This is the home page of the Art Project</p>
+  <section id="home" class="flex flex-col items-center justify-center min-h-screen w-full bg-[url('/images/back.jpeg')] bg-cover bg-center border-b-4 border-black border-opacity-50 pt-32 sm:pt-24 px-4 text-center">
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Welcome to the Art Project</h1>
+    <p class="text-base sm:text-lg lg:text-xl max-w-2xl">This is the home page of the Art Project</p>
   </section>
+
 </body>
 </html>
+
