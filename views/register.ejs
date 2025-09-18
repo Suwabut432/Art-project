@@ -45,9 +45,10 @@
 
   <!-- Login Section -->
   <section id="login"
-    class="flex flex-col items-center justify-center min-h-screen w-full bg-[url('/images/log3.avif')] bg-cover bg-center pt-24">
+    class=" relative flex-col items-center justify-center min-h-screen w-full bg-[url('/images/login.jpg')] bg-cover bg-center pt-24 ">
+    <div class="absolute inset-0 bg-black/60 flex justify-center items-center">
     <div
-      class="flex flex-col items-center justify-center w-[90%] sm:w-[400px] rounded-2xl border border-white/40 bg-black/50 backdrop-blur-md p-6 sm:p-8">
+      class="relative flex-col items-center justify-center w-[90%] sm:w-[400px] rounded-2xl border border-white/40 bg-black/50 backdrop-blur-md p-6 sm:p-8">
       <h2 class="text-white text-2xl sm:text-3xl font-semibold mb-4">Login</h2>
       <form action="/register/create" method="post" class="flex flex-col gap-3 w-full">
         <input type="text" placeholder="Username" name="name"
@@ -59,6 +60,7 @@
         <button type="submit"
           class="bg-white/20 hover:bg-white/40 text-white px-4 py-2 rounded-md mt-2 transition">Login</button>
       </form>
+    </div>
     </div>
   </section>
 
