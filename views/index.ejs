@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Art Project</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="scroll-smooth">
 
   <!-- Header -->
@@ -25,28 +27,44 @@
 
       <!-- Nav Links -->
       <nav id="menu" class="hidden sm:flex sm:items-center sm:gap-4">
-        <a href="/" class="block text-base sm:text-lg font-medium text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">Home</a>
-        <a href="/register" class="block text-base sm:text-lg font-medium text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">Login</a>
-        <a href="/category" class="block text-base sm:text-lg font-medium text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">Categories</a>
+        <a href="/"
+          class="block text-base sm:text-lg font-medium text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">Home</a>
+        <a href="/register"
+          class="block text-base sm:text-lg font-medium text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">Login</a>
+        <a href="/category"
+          class="block text-base sm:text-lg font-medium text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">Categories</a>
       </nav>
     </div>
 
     <!-- Mobile Dropdown Links -->
     <div id="mobile-menu" class="sm:hidden hidden flex-col px-4 pb-4 bg-transparent backdrop-blur-md shadow-md">
       <a href="/" class="block text-base font-medium text-center px-3 py-2 rounded-md hover:bg-gray-200">Home</a>
-      <a href="/register" class="block text-base font-medium text-center px-3 py-2 rounded-md hover:bg-gray-200">Login</a>
-      <a href="/category" class="block text-base font-medium text-center px-3 py-2 rounded-md hover:bg-gray-200">Categories</a>
+      <a href="/register"
+        class="block text-base font-medium text-center px-3 py-2 rounded-md hover:bg-gray-200">Login</a>
+      <a href="/category"
+        class="block text-base font-medium text-center px-3 py-2 rounded-md hover:bg-gray-200">Categories</a>
     </div>
   </header>
 
   <!-- Home Section -->
-  <section id="home" class="flex flex-col items-center justify-center min-h-screen w-full bg-[url('/images/back.jpeg')] bg-cover bg-center border-b-4 border-black border-opacity-50 pt-32 sm:pt-24 px-4 text-center">
+  <!-- <section id="home" class="flex flex-col items-center justify-center min-h-screen w-full opacity-50 bg-[url('/images/back.jpeg')] bg-cover bg-center border-b-4 border-black border-opacity-50 pt-32 sm:pt-24 px-4 text-center">
     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Welcome to the Art Project</h1>
     <p class="text-base sm:text-lg lg:text-xl max-w-2xl">This is the home page of the Art Project</p>
-  </section>
+  </section> -->
 
 
-    <script>
+  <div
+    class="relative bg-[url('/images/back.jpeg')] bg-cover bg-center  min-h-screen w-full border-b-4 border-black border-opacity-50 pt-32 sm:pt-24 px-4 text-center">
+    <!-- Black overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Content on top -->
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <h1 class="text-white text-3xl font-bold">Hello World</h1>
+    </div>
+  </div>
+
+  <script>
     // JS for toggle button
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -57,5 +75,5 @@
     });
   </script>
 </body>
-</html>
 
+</html>
