@@ -8,7 +8,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="scroll-smooth">
+<body style="font-family: 'Montserrat', sans-serif;" class="scroll-smooth">
+
 
   <!-- Header -->
   <header class="fixed top-0 left-0 w-full z-50 border-b border-white/50 bg-white/20 backdrop-blur-md shadow-lg">
@@ -28,11 +29,11 @@
       <!-- Nav Links -->
       <nav id="menu" class="hidden sm:flex sm:items-center sm:gap-4">
         <a href="/"
-          class="block text-base sm:text-lg font-medium text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">Home</a>
+          class="block text-base sm:text-lg font-medium text-center px-3 py-1 text-gray-100 hover:font-bold transition">Home</a>
         <a href="/register"
-          class="block text-base sm:text-lg font-medium text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">Login</a>
+          class="block text-base sm:text-lg font-medium text-center px-3 py-1  text-gray-100 hover:font-bold transition">Login</a>
         <a href="/category"
-          class="block text-base sm:text-lg font-medium text-center px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-800 hover:text-gray-100 hover:font-bold transition">Categories</a>
+          class="block text-base sm:text-lg font-medium text-center px-3 py-1  text-gray-100 hover:font-bold transition">Categories</a>
       </nav>
     </div>
 
@@ -54,14 +55,27 @@
 
 
   <div
-    class="relative bg-[url('/images/back.jpeg')] bg-cover bg-center  min-h-screen w-full border-b-4 border-black border-opacity-50 pt-32 sm:pt-24 px-4 text-center">
+    class="relative bg-[url('/images/back.jpeg')] bg-cover bg-center  min-h-screen w-full border-b-4 border-black border-opacity-50 pt-32 sm:pt-24 px-4 text-center ">
     <!-- Black overlay -->
     <div class="absolute inset-0 bg-black/60"></div>
 
     <!-- Content on top -->
-    <div class="relative z-10 flex items-center justify-center h-full">
-      <h1 class="text-white text-3xl font-bold">Hello World</h1>
+    <div class="xl:px-[20%] grid relative z-10 justify-items-center h-full text-zinc-200">
+      <h1 class="text-4xl font-bold ">WELCOME IN ART GELLERY!</h1>
+
+      <div class="h-32 w-32 rounded-full bg-[url('/images/owner.webp')] bg-cover bg-center">
+      </div>
+
+      <p class="pt-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores modi inventore reprehenderit
+        soluta ducimus consequatur minima ab minus, deserunt nisi id, laboriosam corrupti dolor omnis,
+        quas quis delectus nemo aut aliquam autem.
+      </p>
+      <button
+        class="lg:px-5 lg:py-1 lg:text-center lg:bg-white lg:text-black lg:text-lg border-2 border-zinc-100 mt-5 rounded-md  bg-transparent text-white px-3 py-1   hover:bg-transparent hover:text-white hover:opacity-50">Click
+        me!</button>
     </div>
+
   </div>
 
   <script>
