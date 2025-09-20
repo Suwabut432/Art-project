@@ -12,7 +12,8 @@
     "flash": "^1.1.0",
     "git": "^0.1.5",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.17.0"
+    "mongoose": "^8.17.0",
+    "multer": "^2.0.2"
   },
   "name": "art_project",
   "version": "1.0.0",

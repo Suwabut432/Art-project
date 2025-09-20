@@ -41,8 +41,7 @@
     <div id="mobile-menu"
       class="sm:hidden hidden flex-col px-4 pb-4 bg-transparent backdrop-blur-md shadow-md text-white">
       <a href="#home" class="block text-base font-medium text-center px-3 py-2 rounded-md hover:bg-gray-200">Home</a>
-      <a href="#login"
-        class="block text-base font-medium text-center px-3 py-2 rounded-md hover:bg-gray-200">Login</a>
+      <a href="#login" class="block text-base font-medium text-center px-3 py-2 rounded-md hover:bg-gray-200">Login</a>
       <a href="#categories"
         class="block text-base font-medium text-center px-3 py-2 rounded-md hover:bg-gray-200">Categories</a>
     </div>
@@ -82,81 +81,61 @@
 
 
 
-           <!-- Portfolio Start  -->
-<section id="categories" class="categories pt-20 bg-zinc-800 pb-6" id="portfolio">
-  <div class="container max-w-[1200px] w-full mx-auto text-white px-2">
-    <div class="section-title text-center">
-      <h2 class="block text-[1.5em] my-[0.83em] mx-0 font-bold" style="unicode-bidi:isolate;">Our Categories</h2>
-      <p class="block my-[1em] mx-0" style="unicode-bidi:isolate;">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi voluptatibus quidem dolorem, exercitationem
-      </p>
+  <!-- Portfolio Start  -->
+  <section id="categories" class="categories pt-20 bg-zinc-800 pb-6" id="portfolio">
+    <div class="container max-w-[1200px] w-full mx-auto text-white px-2">
+      <div class="section-title text-center">
+        <h2 class="block text-[1.5em] my-[0.83em] mx-0 font-bold" style="unicode-bidi:isolate;">Our Categories</h2>
+        <p class="block my-[1em] mx-0" style="unicode-bidi:isolate;">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi voluptatibus quidem dolorem, exercitationem
+        </p>
+      </div>
+
+      <!-- Cards Responsive Grid -->
+<ul class="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 sm:px-0">
+  <% if (files.length > 0 && products.length > 0) { %>
+    <% files.forEach(function(file, index) { 
+         const p = products[index];
+    %>
+      <li class="card text-center list-none bg-zinc-700 py-10 px-4 rounded-[5px] shadow-[0_5px_10px_rgba(0,0,0,0.04)] text-zinc-300">
+        <img class="h-[240px] w-full rounded-t-lg pb-5 mb-5" src="/uploads/<%= file %>" alt="card img">
+        <% if (p) { %>
+          <h3 class="block text-lg my-4 font-bold"><%= p.name %></h3>
+          <p class="block my-4"><%= p.bgcolor %></p>
+        <% } %>
+      </li>
+    <% }) %>
+  <% } else { %>
+    <h1>No File Existing!</h1>
+  <% } %>
+</ul>
+
+
     </div>
+  </section>
 
-    <!-- Cards Responsive Grid -->
-    <ul class="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 sm:px-0">
-      
-      <li class="card text-center list-none bg-zinc-700 py-10 px-4 rounded-[5px] shadow-[0_5px_10px_rgba(0,0,0,0.04)] text-zinc-300">
-        <img class="h-[240px] w-full rounded-t-lg pb-5 mb-5" src="/images/kk.webp" alt="card img">
-        <h3 class="block text-lg my-4 font-bold" style="unicode-bidi:isolate;">Mountain Hiking</h3>
-        <p class="block my-4" style="unicode-bidi:isolate;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut dicta deserunt atque quibusdam fugiat.</p>
-      </li>
-
-      <li class="card text-center list-none bg-zinc-700 py-10 px-4 rounded-[5px] shadow-[0_5px_10px_rgba(0,0,0,0.04)] text-zinc-300">
-        <img class="h-[240px] w-full rounded-t-lg pb-5 mb-5" src="/images/home.jpg" alt="card img">
-        <h3 class="block text-lg my-4 font-bold" style="unicode-bidi:isolate;">Mountain Hiking</h3>
-        <p class="block my-4" style="unicode-bidi:isolate;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut dicta deserunt atque quibusdam fugiat.</p>
-      </li>
-
-      <li class="card text-center list-none bg-zinc-700 py-10 px-4 rounded-[5px] shadow-[0_5px_10px_rgba(0,0,0,0.04)] text-zinc-300">
-        <img class="h-[240px] w-full rounded-t-lg pb-5 mb-5" src="/images/two.jpeg" alt="card img">
-        <h3 class="block text-lg my-4 font-bold" style="unicode-bidi:isolate;">Mountain Hiking</h3>
-        <p class="block my-4" style="unicode-bidi:isolate;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut dicta deserunt atque quibusdam fugiat.</p>
-      </li>
-
-      <li class="card text-center list-none bg-zinc-700 py-10 px-4 rounded-[5px] shadow-[0_5px_10px_rgba(0,0,0,0.04)] text-zinc-300">
-        <img class="h-[240px] w-full rounded-t-lg pb-5 mb-5" src="/images/three.jpeg" alt="card img">
-        <h3 class="block text-lg my-4 font-bold" style="unicode-bidi:isolate;">Mountain Hiking</h3>
-        <p class="block my-4" style="unicode-bidi:isolate;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut dicta deserunt atque quibusdam fugiat.</p>
-      </li>
-
-      <li class="card text-center list-none bg-zinc-700 py-10 px-4 rounded-[5px] shadow-[0_5px_10px_rgba(0,0,0,0.04)] text-zinc-300">
-        <img class="h-[240px] w-full rounded-t-lg pb-5 mb-5" src="/images/foure.jpg" alt="card img">
-        <h3 class="block text-lg my-4 font-bold" style="unicode-bidi:isolate;">Mountain Hiking</h3>
-        <p class="block my-4" style="unicode-bidi:isolate;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut dicta deserunt atque quibusdam fugiat.</p>
-      </li>
-
-      <li class="card text-center list-none bg-zinc-700 py-10 px-4 rounded-[5px] shadow-[0_5px_10px_rgba(0,0,0,0.04)] text-zinc-300">
-        <img class="h-[240px] w-full rounded-t-lg pb-5 mb-5" src="/images/five.jpg" alt="card img">
-        <h3 class="block text-lg my-4 font-bold" style="unicode-bidi:isolate;">Mountain Hiking</h3>
-        <p class="block my-4" style="unicode-bidi:isolate;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut dicta deserunt atque quibusdam fugiat.</p>
-      </li>
-
-    </ul>
-  </div>
-</section>
-
-         <!-- Portfolio End -->
+  <!-- Portfolio End -->
 
 
 
-           <!-- Login Section -->
+  <!-- Login Section -->
   <section id="login"
     class=" relative flex-col items-center justify-center min-h-screen w-full  bg-cover bg-center pt-24 ">
     <div class="absolute inset-0 bg-zinc-800 flex justify-center items-center border-t-2 border-zinc-700">
-    <div
-      class="relative flex-col items-center justify-center w-[90%] sm:w-[400px] rounded-2xl border border-white/40 bg-zinc-700 p-6 sm:p-8">
-      <h2 class="text-white text-2xl sm:text-3xl font-semibold mb-4">Login</h2>
-      <form action="/register/create" method="post" class="flex flex-col gap-3 w-full">
-        <input type="text" placeholder="Username" name="name"
-          class="px-4 py-2 rounded-md w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50" />
-        <input type="email" placeholder="Email" name="email"
-          class="px-4 py-2 rounded-md w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50" />
-        <input type="password" placeholder="Password" name="password"
-          class="px-4 py-2 rounded-md w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50" />
-        <button type="submit"
-          class="bg-white/20 hover:bg-white/40 text-white px-4 py-2 rounded-md mt-2 transition">Login</button>
-      </form>
-    </div>
+      <div
+        class="relative flex-col items-center justify-center w-[90%] sm:w-[400px] rounded-2xl border border-white/40 bg-zinc-700 p-6 sm:p-8">
+        <h2 class="text-white text-2xl sm:text-3xl font-semibold mb-4">Login</h2>
+        <form action="/register/create" method="post" class="flex flex-col gap-3 w-full">
+          <input type="text" placeholder="Username" name="name"
+            class="px-4 py-2 rounded-md w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50" />
+          <input type="email" placeholder="Email" name="email"
+            class="px-4 py-2 rounded-md w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50" />
+          <input type="password" placeholder="Password" name="password"
+            class="px-4 py-2 rounded-md w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50" />
+          <button type="submit"
+            class="bg-white/20 hover:bg-white/40 text-white px-4 py-2 rounded-md mt-2 transition">Login</button>
+        </form>
+      </div>
     </div>
   </section>
 
