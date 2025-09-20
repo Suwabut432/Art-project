@@ -92,23 +92,56 @@
       </div>
 
       <!-- Cards Responsive Grid -->
-<ul class="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 sm:px-0">
-  <% if (files.length > 0 && products.length > 0) { %>
-    <% files.forEach(function(file, index) { 
-         const p = products[index];
-    %>
-      <li class="card text-center list-none bg-zinc-700 py-10 px-4 rounded-[5px] shadow-[0_5px_10px_rgba(0,0,0,0.04)] text-zinc-300">
-        <img class="h-[240px] w-full rounded-t-lg pb-5 mb-5" src="/uploads/<%= file %>" alt="card img">
-        <% if (p) { %>
-          <h3 class="block text-lg my-4 font-bold"><%= p.name %></h3>
-          <p class="block my-4"><%= p.bgcolor %></p>
-        <% } %>
-      </li>
-    <% }) %>
-  <% } else { %>
-    <h1>No File Existing!</h1>
-  <% } %>
-</ul>
+      <ul class="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 sm:px-0">
+        <li
+          class="card text-center list-none bg-zinc-700 py-10 px-4 rounded-[5px] shadow-[0_5px_10px_rgba(0,0,0,0.04)] text-zinc-300">
+          <img class="h-[240px] w-full rounded-t-lg pb-5 mb-5" src="/images/kk.webp" alt="card img">
+
+          <h3 class="block text-lg my-4 font-bold">Populer Images</h3>
+          <p class="block my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto asperiores veritatis quae
+            facilis accusamus dolorem nostrum consequatur autem ad eius?</p>
+        </li>
+        <li
+          class="card text-center list-none bg-zinc-700 py-10 px-4 rounded-[5px] shadow-[0_5px_10px_rgba(0,0,0,0.04)] text-zinc-300">
+          <img class="h-[240px] w-full rounded-t-lg pb-5 mb-5" src="/images/mm.jpg" alt="card img">
+
+          <h3 class="block text-lg my-4 font-bold">Populer Images</h3>
+          <p class="block my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto asperiores veritatis quae
+            facilis accusamus dolorem nostrum consequatur autem ad eius?</p>
+        </li>
+        <li
+          class="card text-center list-none bg-zinc-700 py-10 px-4 rounded-[5px] shadow-[0_5px_10px_rgba(0,0,0,0.04)] text-zinc-300">
+          <img class="h-[240px] w-full rounded-t-lg pb-5 mb-5" src="/images/foure.jpg" alt="card img">
+
+          <h3 class="block text-lg my-4 font-bold">Populer Images</h3>
+          <p class="block my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto asperiores veritatis quae
+            facilis accusamus dolorem nostrum consequatur autem ad eius?</p>
+        </li>
+        <li
+          class="card text-center list-none bg-zinc-700 py-10 px-4 rounded-[5px] shadow-[0_5px_10px_rgba(0,0,0,0.04)] text-zinc-300">
+          <img class="h-[240px] w-full rounded-t-lg pb-5 mb-5" src="/images/three.jpeg" alt="card img">
+
+          <h3 class="block text-lg my-4 font-bold">Populer Images</h3>
+          <p class="block my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto asperiores veritatis quae
+            facilis accusamus dolorem nostrum consequatur autem ad eius?</p>
+        </li>
+        <li
+          class="card text-center list-none bg-zinc-700 py-10 px-4 rounded-[5px] shadow-[0_5px_10px_rgba(0,0,0,0.04)] text-zinc-300">
+          <img class="h-[240px] w-full rounded-t-lg pb-5 mb-5" src="/images/two.jpeg" alt="card img">
+
+          <h3 class="block text-lg my-4 font-bold">Populer Images</h3>
+          <p class="block my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto asperiores veritatis quae
+            facilis accusamus dolorem nostrum consequatur autem ad eius?</p>
+        </li>
+        <li
+          class="card text-center list-none bg-zinc-700 py-10 px-4 rounded-[5px] shadow-[0_5px_10px_rgba(0,0,0,0.04)] text-zinc-300">
+          <img class="h-[240px] w-full rounded-t-lg pb-5 mb-5" src="/images/five.jpg" alt="card img">
+
+          <h3 class="block text-lg my-4 font-bold">Populer Images</h3>
+          <p class="block my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto asperiores veritatis quae
+            facilis accusamus dolorem nostrum consequatur autem ad eius?</p>
+        </li>
+      </ul>
 
 
     </div>
